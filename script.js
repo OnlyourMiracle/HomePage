@@ -15,10 +15,10 @@ var swiper = new Swiper('.blog-slider', {
    新增：生成背景跳动自定义文本的逻辑
 ========================================= */
 // 你可以自定义想要在背景跳动的文本内容
-const words =["OnlyourMiracle", "Love", "AI Bot", "Infinite", "知行合一", "少年", "Dream", "Possibilities"];
+const words =["OnlyourMiracle", "Love", "AI Bot", "Infinite", "知行合一思无邪", "少年", "Dream", "Possibilities", "历尽千帆仍少年", "决定我们过什么样生活的 从来不是哪一次的选择 而是我们一直以来的状态", "人生如梦 灵犀一动 不觉惊跃 如魇得醒", "万千智慧始于记忆", "穷人和中产阶级为钱而工作 富人让钱为他工作", "不容置疑的是 太阳升起时你正好在场 这才是最重要的", "我看万物像你 我看你像万物", "财富犹如海水 喝得越多越口渴", "人们常常不知道 哪一次分别是最后一次相见", "人需要有一段好的感情 一份好的工作 一个能自得其乐的爱好 三个占一个 生活就能有盼头"];
 
 // 设置在屏幕上同时显示多少个跳动词汇
-const textCount = 15; 
+const textCount = 20; 
 const container = document.getElementById('bg-text-container');
 
 for (let i = 0; i < textCount; i++) {

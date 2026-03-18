@@ -23,6 +23,7 @@ body {
   border-radius: 25px;
   height: 400px;
   transition: all 0.3s;
+  z-index: 10;
 }
 @media screen and (max-width: 992px) {
   .blog-slider {
@@ -259,5 +260,44 @@ body {
   .blog-slider__pagination .swiper-pagination-bullet-active {
     height: 11px;
     width: 30px;
+  }
+}
+/* =========================================
+   新增：背景跳动文本特效样式
+========================================= */
+#bg-text-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* 关键：确保文本不会阻挡鼠标点击网页按钮 */
+  z-index: 1; /* 放在底层 */
+  overflow: hidden;
+}
+
+.bg-text {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.35); /* 半透明白色，与天蓝色背景百搭 */
+  font-weight: bold;
+  user-select: none;
+  /* 应用跳动漂浮动画 */
+  animation: floatUpAndDown infinite ease-in-out;
+}
+
+/* 跳动和渐变的动画效果 */
+@keyframes floatUpAndDown {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translateY(-40px) scale(1.1);
+    opacity: 0.6;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.2;
   }
 }
